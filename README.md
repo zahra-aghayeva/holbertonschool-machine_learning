@@ -1,1 +1,1 @@
-Calculus project for Machine Learning
+This repository contains math projects for Machine Learning.
