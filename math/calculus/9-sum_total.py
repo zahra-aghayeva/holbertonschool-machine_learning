@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module that calculates the sum of i squared
+Module for calculating the sum of squares
 """
 
 
@@ -14,6 +14,6 @@ def summation_i_squared(n):
     """
     if not isinstance(n, int) or n < 0:
         return None
-
-    # Formula: n(n + 1)(2n + 1) / 6
+    
+    # n=0 olduqda cəm 0-dır. Düstur bunu zatən hesablayır.
     return (n * (n + 1) * (2 * n + 1)) // 6
