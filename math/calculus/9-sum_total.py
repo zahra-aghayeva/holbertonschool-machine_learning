@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 """
-Summation of i squared module
+Module that calculates the sum of i squared
 """
 
 
 def summation_i_squared(n):
     """
-    Calculates the sum of i squared from 1 to n using the formula:
-    [n(n+1)(2n+1)] / 6
+    Calculates the sum of i^2 from 1 to n
+    Args:
+        n: the stopping condition
+    Returns:
+        The integer value of the sum, or None if n is not valid
     """
-    if not isinstance(n, int):
+    if not isinstance(n, int) or n < 0:
         return None
-    if n < 0:
-        return None
-    
-    # n = 0 olduqda dövr baş vermir, cəm 0-dır.
-    # Düstur n=0 üçün də 0 verir: (0 * 1 * 1) // 6 = 0
-    return (n * (n + 1) * (2 * n + 1)) // 6
 
+    # Formula: n(n + 1)(2n + 1) / 6
+    return (n * (n + 1) * (2 * n + 1)) // 6
