@@ -12,8 +12,8 @@ def summation_i_squared(n):
     Returns:
         The integer value of the sum, or None if n is not valid
     """
-    if not isinstance(n, int) or n < 0:
+    if not isinstance(n, int) or n < 1:
         return None
-    
-    # n=0 olduqda cəm 0-dır. Düstur bunu zatən hesablayır.
+
+    # Formula: n(n + 1)(2n + 1) / 6
     return (n * (n + 1) * (2 * n + 1)) // 6
