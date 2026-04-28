@@ -12,22 +12,22 @@ def poly_integral(poly, C=0):
         return None
     if not isinstance(C, (int, float)):
         return None
-    
+
     for coeff in poly:
         if not isinstance(coeff, (int, float)):
             return None
 
     if isinstance(C, float) and C.is_integer():
         C = int(C)
-    
+
     integral = [C]
 
     for i in range(len(poly)):
         new_coeff = poly[i] / (i + 1)
-        
+
         if new_coeff.is_integer():
             new_coeff = int(new_coeff)
-        
+
         integral.append(new_coeff)
 
     while len(integral) > 1 and integral[-1] == 0:
