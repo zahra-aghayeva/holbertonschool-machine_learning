@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
-"""Module focusing on multi-dimensional array concatenation using NumPy.
-
-Leverages efficient matrix operations to bind structural axes seamlessly.
-"""
+"""Defines a function to concatenate two matrices along a specific axis."""
 import numpy as np
 
 
 def np_cat(mat1, mat2, axis=0):
-    """Concatenates two arrays along a specified axis via NumPy routines.
+    """Concatenates two matrices along a specific axis.
 
     Args:
-        mat1 (np.ndarray or list): First numerical input dataset.
-        mat2 (np.ndarray or list): Second numerical input dataset.
-        axis (int): Structural dimension along which data is bound (default: 0).
+        mat1 (numpy.ndarray): The first matrix.
+        mat2 (numpy.ndarray): The second matrix.
+        axis (int): The axis along which the matrices will be joined.
 
     Returns:
-        np.ndarray: The resulting combined array matrix.
+        numpy.ndarray: A new concatenated numpy array.
     """
     return np.concatenate((mat1, mat2), axis=axis)
